@@ -1,3 +1,12 @@
+import Navbar from "./components/Navbar"
+import Intro from "./components/Intro"
+
 export default function Test() {
-    return <h2>This is a test</h2>
+    return (
+        <div>
+            <h1>Simple React</h1>
+            <Navbar />
+            <Intro />
+        </div>
+    )
 }

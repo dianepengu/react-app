@@ -1,13 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+
 import './index.css';
-import Test from './Test';
+
+import Test from './pages/Test';
+import Login from './pages/Login';
+import About from './pages/About';
+
+import Navbar from './components/Navbar';
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Test />
+    <BrowserRouter>
+      <h1>Simple React</h1>
+      <Navbar />
+      <Routes>
+        <Route path='/' index element={<Test />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

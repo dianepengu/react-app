@@ -1,5 +1,5 @@
 import { useState } from "react"
-import './Login.css'
+// import './Login.css'
 import '../components/Modal.css'
 import Modal from "../components/Modal"
 
@@ -53,46 +53,43 @@ export default function Login() {
     }
 
     return (
-        <div className={"mainContainer"}>
-            <div className={"titleContainer"}>
-                <div>Login</div>
-            </div>
-            <br />
-            <div className={"inputContainer"}>
+        <div className='flex flex-col w-2/3 p-5 justify-center items-center'>
+            <div className="flex flex-col w-1/3 space-y-5 justify-center items-center">
+                <div className='flex flex-col justify-center items-center'>
+                    <div className="text-3xl font-bold">Login</div>
+                </div>
+                <div className='flex flex-col w-full justify-center items-start'>
+                    <input
+                        value={username}
+                        placeholder="Enter your username here"
+                        onChange={ev => setUsername(ev.target.value)}
+                        className='p-2 border-2 w-full rounded-lg' />
+                    <label className="w-full text-sm text-red-500 ml-1">{usernameError}</label>
+                </div>
+                <div className='flex flex-col w-full justify-center items-start'>
+                    <input
+                        value={password}
+                        placeholder="Enter your password here"
+                        onChange={ev => setPassword(ev.target.value)}
+                        className='p-2 border-2 w-full rounded-lg' />
+                    <label className="text-sm text-red-500 ml-1">{passwordError}</label>
+                </div>
                 <input
-                    value={username}
-                    placeholder="Enter your username here"
-                    onChange={ev => setUsername(ev.target.value)}
-                    className={"inputBox"} />
-                <label className="errorLabel">{usernameError}</label>
-            </div>
-            <br />
-            <div className={"inputContainer"}>
-                <input
-                    value={password}
-                    placeholder="Enter your password here"
-                    onChange={ev => setPassword(ev.target.value)}
-                    className={"inputBox"} />
-                <label className="errorLabel">{passwordError}</label>
-            </div>
-            <br />
-            <div className={"inputContainer"}>
-                <input
-                    className={"inputButton"}
+                    className='w-full p-2 text-white font-semibold bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-lg'
                     type="button"
                     onClick={onButtonClick}
                     value={"Log in"} />
-            </div>
-            {showModal &&
-                <div id="myModal" class="modal">
 
-                    <div class="modal-content">
-                        <span class="close" onClick={() => { setShowModal(false) }}>&times;</span>
-                        <p>Login Success!</p>
+                {showModal &&
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close" onClick={() => { setShowModal(false) }}>&times;</span>
+                            <p>Login Success!</p>
+                        </div>
                     </div>
-
-                </div>
-            }
+                }
+            </div>
         </div>
     )
 

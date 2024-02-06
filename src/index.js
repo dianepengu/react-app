@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import './index.css';
 
-import Test from './pages/Test';
+import Home from './pages/Home';
 import Login from './pages/Login';
 import About from './pages/About';
 
@@ -16,13 +16,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <h1>Simple React</h1>
-      <Navbar />
-      <Routes>
-        <Route path='/' index element={<Test />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
+      <div className='flex flex-col w-screen h-screen items-center space-y-4'>
+        <div className='flex flex-col items-center mt-10 space-y-4'>
+          <h1 className='text-3xl font-bold'>Simple React</h1>
+          <Navbar />
+        </div>
+        <div className='flex flex-col items-center w-3/4'>
+          <Routes>
+            <Route path='/' index element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </div>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

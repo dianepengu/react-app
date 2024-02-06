@@ -1,22 +1,34 @@
 import { Outlet, Link } from 'react-router-dom';
 
-import './Navbar.css'
-
 export default function Navbar() {
     return (
-        <ul>
-            <li>
-                <Link to={'/'}><a >Home</a></Link>
-            </li>
-            <li>
-                <Link to={'/login'}><a >Log In</a></Link>
-            </li>
-            <li>
-                <a >Contact</a>
-            </li>
-            <li>
-                <Link to={'/about'}><a >About</a></Link>
-            </li>
+        <ul className='list-none'>
+            <span className='group'>
+                <Link to={'/'}>
+                    <li className='inline text-black px-8 py-3 group-hover:bg-slate-500'>
+                        <a className='group-hover:text-white'>Home</a>
+                    </li>
+                </Link>
+            </span>
+            <span className='group'>
+                <Link to={'/login'}>
+                    <li className='inline text-black px-8 py-3 group-hover:bg-slate-500'>
+                        <a className='group-hover:text-white'>Log In</a>
+                    </li>
+                </Link>
+            </span>
+            <span className='group'>
+                <li className='inline text-black px-8 py-3 group-hover:bg-slate-500'>
+                    <a className='group-hover:text-white'>Contact</a>
+                </li>
+            </span>
+            <span className='group'>
+                <Link to={'/about'}>
+                    <li className='inline text-black px-8 py-3 group-hover:bg-slate-500'> 
+                        <a className='group-hover:text-white'>About</a>
+                    </li>
+                </Link>
+            </span>
             <Outlet />
         </ul>
     )

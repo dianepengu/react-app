@@ -1,11 +1,11 @@
 export default function About() {
     return (
-        <div>
-            <h1>About</h1>
-            <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id efficitur velit. Nam eu tempus diam, eget blandit nulla. Nulla ornare eget ligula eu rhoncus. Pellentesque et orci ut lacus venenatis accumsan. Etiam tristique, augue eu consequat convallis, turpis est bibendum arcu, at tempor mauris justo et sapien. Nunc semper dapibus dapibus. In sed gravida dui. Nunc accumsan enim sit amet facilisis egestas. Integer bibendum placerat lorem, id sollicitudin urna finibus sit amet. In sollicitudin magna quis metus ornare, nec dapibus eros accumsan. Curabitur nulla dolor, porta vel lacus sed, molestie lacinia diam. Sed laoreet est sed aliquam dapibus. Nunc quam nisi, posuere eu tincidunt et, luctus sit amet erat.
-
-Sed eleifend tristique tortor vel interdum. Nunc tincidunt, arcu ut accumsan ultrices, quam libero aliquet augue, eget volutpat tortor nisi vitae ligula. Nullam urna ipsum, lobortis eget dapibus posuere, interdum sed ligula. Morbi lobortis, erat eu pharetra posuere, dolor ipsum interdum orci, a tristique enim dolor quis metus. Donec sodales sit amet augue sit amet condimentum. Pellentesque magna odio, convallis eu magna vel, ornare aliquet nibh. Nunc imperdiet lectus eget risus dignissim maximus.</p>
+        <div className="flex flex-col space-y-4">
+             <div className="flex flex-col space-y-2">
+                <h1 className="text-3xl font-bold">About</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis diam id sapien pharetra, sed ultricies nisl tincidunt. Etiam lacinia accumsan elit, in malesuada lorem blandit ut. Nunc et condimentum massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate diam lacus, iaculis aliquam ex mattis sed. Sed aliquam arcu ut felis fermentum maximus. Nullam porttitor, augue ac vestibulum vestibulum, magna nisi sollicitudin velit, vitae accumsan ante nunc ut risus. Quisque scelerisque congue convallis. Nunc fermentum sit amet nisl sagittis lacinia. Nulla sed lectus tortor. Fusce aliquet nunc ut facilisis scelerisque. Aliquam malesuada lorem et tellus condimentum convallis. Nunc varius euismod tortor in tristique. Quisque id efficitur est.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis diam id sapien pharetra, sed ultricies nisl tincidunt. Etiam lacinia accumsan elit, in malesuada lorem blandit ut. Nunc et condimentum massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate diam lacus, iaculis aliquam ex mattis sed. Sed aliquam arcu ut felis fermentum maximus. Nullam porttitor, augue ac vestibulum vestibulum, magna nisi sollicitudin velit, vitae accumsan ante nunc ut risus. Quisque scelerisque congue convallis. Nunc fermentum sit amet nisl sagittis lacinia. Nulla sed lectus tortor. Fusce aliquet nunc ut facilisis scelerisque. Aliquam malesuada lorem et tellus condimentum convallis. Nunc varius euismod tortor in tristique. Quisque id efficitur est.</p>
+            </div>
         </div>
     )
 }
